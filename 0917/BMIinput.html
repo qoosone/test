@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+身高: <input type="text"   id="ht"><br>
+體重: <input type="text"   id='wt'><br>
+<button type="button" onclick="byt()">計算</button>
+
+<hr>
+
+<span id="bmi"></span><br>
+<script>
+        function byt() {
+            var h=document.getElementById("ht").value;
+        h=parseFloat(h)/100
+
+        var w=document.getElementById("wt").value;
+        w=parseFloat(w)
+
+        var bmi=w/(h*h);
+
+            if(bmi<25)
+            a=("過輕");
+            else if(bmi>30)
+            a=("過重");
+            else if(bmi>=25 && bmi<=30)
+            a=("正常");
+            document.write("體重"+a+"<br/>");
+     
+   
+            document.getElementById("bmi").innerText=Math.round(bmi);
+
+        }
+
+
+
+
+
+    
+</script>
+
+</body>
+</html>

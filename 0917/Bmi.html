@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>肥宅量表</title>
+</head>
+<body>
+    <script>
+
+    var w=85;
+    var h=1.8;
+    var bmi=w/(h*h);
+    document.writeln("體重"+w+"公斤,身高"+h+"公尺<br/>");
+    document.write("BMI為"+Math.round(bmi)+"<br/>");
+
+    //用IF來計算判斷
+    if(bmi<25)
+    a=("過輕");
+    else if(bmi>30)
+    a=("過重");
+    else if(bmi>=25 && bmi<=30)
+    a=("正常");
+    document.write("體重"+a+"<br/>");
+
+
+    //用function來計算BMI的方法
+    function name(h,w) {
+        return w/(h*h);
+    }        
+    var bmi2=name(h,w);
+    document.write("你的BMI是"+bmi2+"<br/>");
+    document.write("fk");
+
+
+
+    </script>
+</body>
+</html>
